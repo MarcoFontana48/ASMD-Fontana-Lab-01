@@ -2,6 +2,8 @@ package calculator;
 
 import io.cucumber.java.en.*;
 
+import static org.junit.jupiter.api.Assertions.assertThrows;
+
 public class CalculatorSteps {
     private int res = 0;
     private Calculator calculator;
@@ -51,5 +53,41 @@ public class CalculatorSteps {
         if (arg0 != this.calculator.getResult()) {
             throw new IllegalStateException();
         }
+    }
+    
+    @And("I have a first integer {int}")
+    public void iHaveAFirstIntegerDividend(int arg0) {
+        this.calculator.enter(arg0);
+    }
+    
+    @And("I have a second integer {int}")
+    public void iHaveASecondIntegerDivisor(int arg1) {
+        this.calculator.enter(arg1);
+    }
+    
+    @When("I divide the first integer by the second integer")
+    public void iDivideTheFirstIntegerByTheSecondInteger() {
+        this.calculator.divide();
+    }
+    
+    @Then("I should get the integer result {int}")
+    public void iShouldGetTheIntegerResultResult(int res) {
+        if (res != this.calculator.getResult()) {
+            throw new IllegalStateException();
+        }
+    }
+    
+    @When("I attempt to divide the first integer by the second integer")
+    public void iAttemptToDivideTheFirstIntegerByTheSecondInteger() {
+        try {
+            this.calculator.divide();
+        } catch (ArithmeticException e) {
+            // expected
+        }
+    }
+    
+    @Then("I should get an error message indicating division by zero is not allowed")
+    public void iShouldGetAnErrorMessageIndicatingDivisionByZeroIsNotAllowed() {
+        assertThrows(ArithmeticException.class, () -> this.calculator.divide());
     }
 }

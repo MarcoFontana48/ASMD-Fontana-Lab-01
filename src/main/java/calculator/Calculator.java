@@ -36,6 +36,14 @@ public class Calculator {
         this.numbers.remove(1);
     }
     
+    public void divide() {
+        if (this.numbers.size() != 2){
+            throw new IllegalStateException();
+        }
+        this.numbers.set(0, this.numbers.get(0) / this.numbers.get(1));
+        this.numbers.remove(1);
+    }
+    
     public int getResult(){
         if (this.numbers.size() != 1){
             throw new IllegalStateException();
