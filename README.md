@@ -217,9 +217,11 @@ like Perplexity. Also, Claude provided more examples than the other models.
 ## Conclusion
 Each model successfully generated a Gherkin specification for a division operation considering the given constraints.
 Some required small modifications like the case of division by zero, which was not initially considered by some models.
-However, ChatGPT and Gemini initially missed the case of division by zero, which was later corrected.
+
+ChatGPT and Gemini initially missed the case of division by zero, which was later corrected.
 Perplexity and Claude considered the division by zero case in their initial responses. 
 Claude provided more examples than the other models, which is beneficial for testing purposes.
+
 Overall, all models were able to generate the required Gherkin specification effectively and speeded up the process of
 writing test cases.
 
