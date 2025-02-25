@@ -14,7 +14,7 @@ The questions asked to the models are the following:
 
 Q1:
 ```text
-Gherkin, generate a Gherkin specification for a division operation considering:
+Considering Gherkin, generate a Gherkin specification for a division operation considering:
 - only 2 integers as input
 - only integers as output
 - use Scenario Outline
@@ -32,7 +32,7 @@ Add a Scenario for the division by zero edge case
 
 Q1: 
 ```text
-Gherkin, generate a Gherkin specification for a division operation considering:
+Considering Gherkin, generate a Gherkin specification for a division operation considering:
 - only 2 integers as input
 - only integers as output
 - use Scenario Outline
@@ -81,7 +81,7 @@ did not consider the case of division by zero at first.
 
 Q1:
 ```text
-Gherkin, generate a Gherkin specification for a division operation considering:
+Considering Gherkin, generate a Gherkin specification for a division operation considering:
 - only 2 integers as input
 - only integers as output
 - use Scenario Outline
@@ -137,7 +137,7 @@ numbers, but it did not consider the case of division by zero at first.
 
 Q1:
 ```text
-Gherkin, generate a Gherkin specification for a division operation considering:
+Considering Gherkin, generate a Gherkin specification for a division operation considering:
 - only 2 integers as input
 - only integers as output
 - use Scenario Outline
@@ -174,7 +174,7 @@ that both ChatGPT and Gemini missed.
 
 Q1:
 ```text
-Gherkin, generate a Gherkin specification for a division operation considering:
+Considering Gherkin, generate a Gherkin specification for a division operation considering:
 - only 2 integers as input
 - only integers as output
 - use Scenario Outline
